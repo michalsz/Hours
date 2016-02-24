@@ -2,7 +2,7 @@
   .footer-links
     %ul
       %li
-        %a{href: "#{root_path}#pricing"} Pricing
+        %a{href: "#{root_path}#pricing"} Cennik
       %li= link_to "The Team", page_path("team")
       %li
         = form_tag '/', method: 'get', id: 'locale', enforce_utf8: false  do
@@ -10,12 +10,5 @@
   %hr/
   %p
 
-    Brought to you by
-    %a{href: "http://www.defacto.nl", target: "_blank"} Defacto
-    and our
-    = succeed "." do
-      %a{href: "https://github.com/DefactoSoftware/Hours/graphs/contributors", target: "_blank"} contributors
-    %br/
-    Greetings from drizzling
-    %a{href: "https://www.flickr.com/search/?q=groningen", target: "_blank"} Groningen
-    \- The Hours team.
+    Stworzone przez
+    %a{href: "https://redweb.pl", target: "_blank"} redweb.pl
