@@ -10,16 +10,16 @@
           .flip
             .flip-front
               %span
-                = t("pages.free_trial")
+                = raw(t("pages.free_trial"))
             .flip-back
               %span
-                Free
-                %br>/
-                Trial
+                = raw(t("pages.free_trial"))
   .main
     .copy
       %p
-        Super tekst
+        Korzystaj z nowoczesnych rozwiązań
+        Zapewniamy proste i wygodne rejestrowanie czasu nad spędzonymi zadaniami
+
   .browsers
     .browser
       .browser-top-bar
@@ -46,7 +46,8 @@
       .card
         = link_to new_accounts_path do
           .card-image.free
-            %p Freelance
+            %p
+              = t("pages.freelance")
         .card-header
           Free!
         .card-copy
@@ -66,7 +67,8 @@
           .ribbon Popular
         = link_to new_accounts_path do
           .card-image.medium
-            %p Small Teams
+            %p
+              = t("pages.small_team")
         .card-header
           $25 / month
         .card-copy
@@ -82,7 +84,8 @@
       .card
         = link_to new_accounts_path do
           .card-image.enterprise
-            %p Enterprise
+            %p
+              = t("pages.enterprise")
         .card-header
           Call us :)
         .card-copy
@@ -105,6 +108,6 @@
       trial. No credit card needed.
     = link_to new_accounts_path do
       %button Free trial
-    
+
     %p
   = render "footer"
