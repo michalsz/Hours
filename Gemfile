@@ -86,4 +86,5 @@ end
 group :staging, :production do
   gem "newrelic_rpm", ">= 3.7.3"
   gem "rails_12factor"
+  gem 'puma'
 end
