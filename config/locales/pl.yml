@@ -232,7 +232,7 @@ pl:
     show_more: pokaż więcej...
   titles:
     activities: Aktywność
-    application: Godziny
+    application: Timetracking
     accounts:
       edit: Edytuj konto
     archives:
@@ -290,3 +290,5 @@ pl:
     small_team: Mały zespół
     enterprise: Duży zespół
     popular: Popularny
+    prices: Cennik
+    free_slogan: Darmowy okres. Nie wymaga karty kredytowej

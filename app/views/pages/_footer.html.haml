@@ -2,8 +2,9 @@
   .footer-links
     %ul
       %li
-        %a{href: "#{root_path}#pricing"} Cennik
-      %li= link_to "The Team", page_path("team")
+        %a{href: "#{root_path}#pricing"}
+          = t("pages.prices")
+
       %li
         = form_tag '/', method: 'get', id: 'locale', enforce_utf8: false  do
           = select_tag 'language', options_for_select(I18n.available_locales, I18n.locale)

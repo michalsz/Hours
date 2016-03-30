@@ -51,9 +51,7 @@
         .card-header
           Free!
         .card-copy
-          %p
-            %strong Hours
-            is free for small teams and freelancers: if you are up to 5 people, this one's on us!
+
         .card-stats
           %ul
             %li
@@ -70,9 +68,9 @@
             %p
               = t("pages.small_team")
         .card-header
-          $25 / month
+          25zł / miesiąc
         .card-copy
-          %p Tailored toward consultancies and medium sized teams, this plan will only cost you less than a beer per user per month. If you can't afford us, stop drinking so much beer!
+
         .card-stats
           %ul
             %li
@@ -87,13 +85,9 @@
             %p
               = t("pages.enterprise")
         .card-header
-          Call us :)
+          Do ustalenia
         .card-copy
-          %p
-            %a{:href => "tel:+31 50 3144832"} Call us,
-            maybe...
-          %p
-            %strong +31 50 314 48 32
+
         .card-stats
           %ul
             %li
@@ -103,9 +97,9 @@
               Unlimited
               %span everything
     %p
-      Or start with a
-      %strong free
-      trial. No credit card needed.
+      %br
+      %strong
+        = t("pages.free_slogan")
     = link_to new_accounts_path do
       %button Free trial
 
