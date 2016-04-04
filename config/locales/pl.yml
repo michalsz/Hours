@@ -232,7 +232,7 @@ pl:
     show_more: pokaż więcej...
   titles:
     activities: Aktywność
-    application: Godziny
+    application: Timetracking
     accounts:
       edit: Edytuj konto
     archives:
@@ -284,5 +284,11 @@ pl:
     not_archived: Nie zarchiwizowane
   pages:
     slogan: Rejestracja czasu, która nie zawodzi
-    free_trial: "Darmowy <br/>okres próbny"
+    free_trial_html: "Darmowy <br/>okres próbny"
     prices: Ceny
+    freelance: Freelancer
+    small_team: Mały zespół
+    enterprise: Duży zespół
+    popular: Popularny
+    prices: Cennik
+    free_slogan: Darmowy okres. Nie wymaga karty kredytowej

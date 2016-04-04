@@ -284,5 +284,11 @@ en:
     not_archived: Not Archived
   pages:
     slogan: Time registration that doesn't suck.
-    free_trial: Free<br/> triall
+    free_trial_html: Free<br/> triall
     prices: Prices
+    freelance: Freelance
+    small_team: Small Team
+    enterprise: Enterprise
+    popular: Popular
+    prices: Price list
+    free_slogan: Free trial. No credit card needed.

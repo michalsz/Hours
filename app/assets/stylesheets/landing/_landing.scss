@@ -72,7 +72,7 @@
       }
 
       a.button {
-        $button-size: 160px;
+        $button-size: 260px;
 
         display: inline-block;
         width: $button-size;
@@ -90,7 +90,7 @@
           @include transition(all .5s ease);
           @include transform-style(preserve-3d);
           position: relative;
-          color: #fff;
+          color: red;
 
           .flip-front,
           .flip-back {

@@ -10,16 +10,16 @@
           .flip
             .flip-front
               %span
-                = t("pages.free_trial")
+                = raw(t("pages.free_trial"))
             .flip-back
               %span
-                Free
-                %br>/
-                Trial
+                = raw(t("pages.free_trial"))
   .main
     .copy
       %p
-        Hours is a dead simple project based time tracking application that #{link_to "we", page_path("team")} use for internal time-tracking. It allows users to register how many hours they've worked on a project with a certain category (think design, software development, testing for software teams) and add any tag they like to it. This gives us a lot of insight on how we spend our time on different projects.
+        Korzystaj z nowoczesnych rozwiązań
+        Zapewniamy proste i wygodne rejestrowanie czasu nad spędzonymi zadaniami
+
   .browsers
     .browser
       .browser-top-bar
@@ -46,13 +46,12 @@
       .card
         = link_to new_accounts_path do
           .card-image.free
-            %p Freelance
+            %p
+              = t("pages.freelance")
         .card-header
           Free!
         .card-copy
-          %p
-            %strong Hours
-            is free for small teams and freelancers: if you are up to 5 people, this one's on us!
+
         .card-stats
           %ul
             %li
@@ -66,11 +65,12 @@
           .ribbon Popular
         = link_to new_accounts_path do
           .card-image.medium
-            %p Small Teams
+            %p
+              = t("pages.small_team")
         .card-header
-          $25 / month
+          25zł / miesiąc
         .card-copy
-          %p Tailored toward consultancies and medium sized teams, this plan will only cost you less than a beer per user per month. If you can't afford us, stop drinking so much beer!
+
         .card-stats
           %ul
             %li
@@ -82,15 +82,12 @@
       .card
         = link_to new_accounts_path do
           .card-image.enterprise
-            %p Enterprise
+            %p
+              = t("pages.enterprise")
         .card-header
-          Call us :)
+          Do ustalenia
         .card-copy
-          %p
-            %a{:href => "tel:+31 50 3144832"} Call us,
-            maybe...
-          %p
-            %strong +31 50 314 48 32
+
         .card-stats
           %ul
             %li
@@ -100,15 +97,11 @@
               Unlimited
               %span everything
     %p
-      Or start with a
-      %strong free
-      trial. No credit card needed.
+      %br
+      %strong
+        = t("pages.free_slogan")
     = link_to new_accounts_path do
       %button Free trial
-    %p
-      %small
-        Alternatively you can grab the
-        %a{:href => "https://github.com/DefactoSoftware/Hours/"} source
-        from Github and host it yourself.
+
     %p
   = render "footer"
