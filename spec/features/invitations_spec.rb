@@ -28,7 +28,8 @@ feature "Inviting users" do
     end
 
     scenario "displays an informative message" do
-      expect(page).to have_content "invitation email has been sent"
+      expect(page).to have_content I18n.t('devise.invitations.send_instructions')
+      .gsub('%{email}', "new.invitee@example.com")
       expect(page).to have_content "new.invitee@example.com"
     end
 
@@ -54,7 +55,7 @@ feature "Inviting users" do
       end
 
       it "shows a confirmation" do
-        expect(page).to have_content "You are now signed in"
+        expect(page).to have_content I18n.t('devise.invitations.updated')
       end
     end
   end

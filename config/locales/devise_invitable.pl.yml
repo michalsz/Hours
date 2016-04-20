@@ -1,0 +1,21 @@
+pl:
+  devise:
+    invitations:
+      send_instructions: 'Email z zaproszenie został wysłany na adres %{email}.'
+      invitation_token_invalid: 'Token dla zaproszenia jest nieprawidłowy!'
+      updated: 'Twoje hasło zostało wysłane. Jesteś teraz zalogowany.'
+      no_invitations_remaining: "Brak zaproszenia"
+      invitation_removed: 'Twoje zaporszenie zostało usunięte.'
+      new:
+        header: "Wyślij zaproszenie"
+        submit_button: "Wyślij"
+      edit:
+        header: "Ustaw hasło"
+        submit_button: "Zapisz hasło"
+    mailer:
+      invitation_instructions:
+        subject: Jesteś zaproszony do timetracking
+        greeting: Cześć
+        someone_invited_you: 'Kto zaprosił Ciebie na%{url}, zaakceptuj poprzez kliknięcie w poniższy link.'
+        accept: 'Zaakceptuj zaproszenie'
+        ignore_html: "Jeśli nie chcesz zaakceptować zaproszenie zignoruj ten email.<br />Twoje konto nie zostanie utworzone do czasu kliknięcia w link i ustawienia hasła."

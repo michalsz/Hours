@@ -3,7 +3,7 @@
     .hero-inner
       .hero-copy
         %h1#logo
-          = image_tag("logo-white-shadow.png", alt: 'Hours')
+          = image_tag("logo-white-shadow.png", alt: 'Timetacking')
         %h2
           = t("pages.slogan")
         = link_to new_accounts_path, class: "button" do
@@ -49,20 +49,22 @@
             %p
               = t("pages.freelance")
         .card-header
-          Free!
+          = t('pages.free')
         .card-copy
 
         .card-stats
           %ul
             %li
               5
-              %span Users
+              %span
+                = t("pages.users")
             %li
-              Unlimited
-              %span Projects &amp; Entries
+              = t("pages.unlimited")
+              %span
+                = t("pages.project_entries")
       .card
         .ribbon-wrapper
-          .ribbon Popular
+          .ribbon Popularny
         = link_to new_accounts_path do
           .card-image.medium
             %p
@@ -75,10 +77,12 @@
           %ul
             %li
               25
-              %span Users
+              %span
+                = t("pages.users")
             %li
-              Unlimited
-              %span Projects &amp; entries
+              = t("pages.unlimited")
+              %span
+                = t("pages.project_entries")
       .card
         = link_to new_accounts_path do
           .card-image.enterprise
@@ -92,10 +96,12 @@
           %ul
             %li
               25+
-              %span Users
+              %span
+                = t("pages.users")
             %li
-              Unlimited
-              %span everything
+              = t("pages.unlimited")
+              %span
+                = t("pages.project_entries")
     %p
       %br
       %strong

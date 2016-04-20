@@ -16,6 +16,7 @@
                 %table.entries-table
                   = render partial: "application/mileages_entry_form", locals: { form_title: t("entries.index.new_mileages") }
       %ul.project-list
+        = I18n.locale
         - localized_cache cache_keys_for_all(:projects, :categories) do
           - unless Project.any?
             .info
