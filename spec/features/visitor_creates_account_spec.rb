@@ -37,6 +37,6 @@ feature "Account Creation" do
     fill_in :signup_password_confirmation, with: "secure123!@#"
     fill_in :signup_subdomain, with: subdomain
 
-    click_button "Create Account"
+    click_button I18n.t("account.create")
   end
 end

@@ -14,7 +14,7 @@ describe EntryCSVGenerator do
   it "generates csv" do
     csv = generator.generate
     expect(csv).to include(
-      "Date,User,Project,Category,Client,Hours,Billable,Billed,Description")
+      "#{I18n.t('report.headers.date')},#{I18n.t('report.headers.user')},#{I18n.t('report.headers.project')},#{I18n.t('report.headers.category')},#{I18n.t('report.headers.client')},#{I18n.t('report.headers.hours')},#{I18n.t('report.headers.billable')},#{I18n.t('report.headers.billed')},#{I18n.t('report.headers.description')}")
     expect(csv.lines.count).to eq(10)
     expect(csv.lines.second.split(",").count).to eq(1)
     expect(csv.lines.last.split(",").count).to eq(7)
