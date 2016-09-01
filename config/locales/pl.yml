@@ -65,6 +65,10 @@ pl:
             subdomain:
               invalid_characters: zawiera nie poprawne znaki
               restricted: pod warunkiem subdomeny jest ograniczona
+        client:
+          attributes:
+            name:
+               blank: Podanie nazwy klienta pozwala na utworznie klienta
   back: Cofnij
   billables:
     billable_entries: Wpisy rozliczone
@@ -152,17 +156,17 @@ pl:
         create: Create Project
         update: Update Project
       category:
-        create: Create Category
-        update: Update Category
+        create: Utwórz kategorię
+        update: Aktualizuj kategorię
       client:
         create: Create Client
         update: Update Client
   info:
     here: here
-    no_categories_html: It looks like you don't have any categories set up yet, you
-      can set one up %{categories_path}.
-    no_projects_html: It looks like you don't have any projects set up yet, you can
-      set one up %{new_project_path}.
+    no_categories_html: Wygląda na to, że nie masz jeszcze skonfigurowanych kategori, aby dodać
+       kategorię kliknij link %{categories_path}.
+    no_projects_html: Wygląda na to, że nie masz jeszcze skonfigurowanych projektów, aby dodać
+       projekt kliknij link %{new_project_path}.
     no_billable_projects_html: It looks like you don't have any billable projects yet, you can
       set one up %{new_project_path}.
     no_billable_entries_html: It looks like no entries meet your filter requirements yet.
@@ -171,12 +175,12 @@ pl:
     signing_in: Sigining in
   navbar:
     dropdown:
-      edit_user: Edit profile
-    entries: My Entries
-  no_hours_registered: Nobody spent any time on %{project} yet
+      edit_user: Edytuj profil
+    entries: Moje wpisy
+  no_hours_registered: NIe ma wppisów dla projektu %{project}
   project:
     errors:
-      client_missing: If the project is billable it needs a client
+      client_missing: Jeśli projekt jest rozliczany wymagany jest klient dla projektu.
     form:
       client: Client
       no_client: No Client
@@ -244,7 +248,7 @@ pl:
       new: Nowa kategoria
       edit: Edytuj kategorię
     clients:
-      index: KLienci
+      index: Klienci
       new: Nowy klient
     entries:
       index: Wszystkie wpisy

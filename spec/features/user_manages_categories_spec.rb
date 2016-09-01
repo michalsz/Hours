@@ -51,8 +51,8 @@ feature "User manages categories" do
     visit categories_url(subdomain: subdomain)
     expect(page).to have_content "edit"
     click_link "edit"
-    fill_in "Name", with: "ahw yes"
-    click_button I18n.t("helpers.submit.category.update")
+    fill_in I18n.t("simple_form.labels.category.name"), with: "ahw yes"
+    click_button I18n.t("helpers.submit.category.create")
     expect(page).to have_content "ahw yes"
   end
 
@@ -61,13 +61,13 @@ feature "User manages categories" do
 
     visit edit_category_url(category, subdomain: subdomain)
     fill_in "Name", with: ""
-    click_button I18n.t("helpers.submit.category.update")
+    click_button I18n.t("helpers.submit.category.create")
     expect(page).to have_content "Please review the problems below"
   end
 
   def create_category(name)
     visit categories_url(subdomain: subdomain)
-    fill_in "Name", with: name
+    fill_in I18n.t("simple_form.labels.defaults.name"), with: name
     click_button I18n.t("helpers.submit.category.create")
   end
 end

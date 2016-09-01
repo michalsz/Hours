@@ -41,7 +41,7 @@ describe Account do
       account.valid?
 
       expect(account.errors.messages[:subdomain]).
-        to eq ["contains invalid characters"]
+        to eq [I18n.t('account.invalid_characters')]
     end
 
     it "set for restricted subdomain" do

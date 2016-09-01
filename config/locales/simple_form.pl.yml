@@ -1,9 +1,9 @@
-en:
+pl:
   simple_form:
     "yes": 'Yes'
     "no": 'No'
     required:
-      text: 'required'
+      text: 'pole wymagane'
       mark: '*'
       # You can uncomment the line below if you need to overwrite the whole required html.
       # When using html, text and mark won't be used.
@@ -12,10 +12,16 @@ en:
       default_message: "Please review the problems below:"
     labels:
       defaults:
-        password: Password
-        name: Name
+        description: Opis
+        budget: Budżet (godziny)
+        client: Klient
+        name: Nazwa
+        billable: Rozliczany
+        submit: Zapisz
       category:
-        name: Name
+        name: Nazwa kategori
+      projekt:
+        budget: Budżet
     # Examples
     # labels:
     #   defaults:
