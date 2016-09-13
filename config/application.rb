@@ -32,6 +32,13 @@ module Hours
       app.config.paths.add "app/presenters", eager_load: true
     end
 
+    config.before_configuration do
+      env_file = File.join(Rails.root, 'config', 'local_envs.yml')
+      YAML.load(File.open(env_file)).each do |key, value|
+      ENV[key.to_s] = value
+      end if File.exists?(env_file)
+    end
+
     # config.autoload_paths += Dir[Rails.root.join('app', 'models', '{**/}')]
 
     # Settings in config/environments/* take precedence
@@ -58,5 +65,6 @@ module Hours
     config.i18n.default_locale = :pl
     config.secret_token = ENV["SECRET_TOKEN"]
     config.active_record.raise_in_transactional_callbacks = true
+    config.assets.precompile += %w( landing.scss )
   end
 end
