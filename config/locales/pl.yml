@@ -69,6 +69,21 @@ pl:
           attributes:
             name:
                blank: Podanie nazwy klienta pozwala na utworznie klienta
+        user:
+          attributes:
+            first_name:
+              blank: Podanie imienia jest wymagane w celu utworzenia konta
+            last_name:
+              blank: Podanie nazwiska jest wymagane w celu utworzenia konta
+            email:
+              blank: Podanie e-maila jest wymagane w celu utworzenia konta
+            password:
+              blank: Podanie hasła jest wymagane w celu utworzenia konta
+        account:
+          attributes:
+            subdomain:
+              blank: Podanie subdomany dla Twojego konta jest wymagane w celu utworzenia konta
+
   back: Cofnij
   billables:
     billable_entries: Wpisy rozliczone
