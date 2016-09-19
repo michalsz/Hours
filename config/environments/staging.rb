@@ -6,4 +6,5 @@ Hour::Application.configure do
   # ...
 
   config.action_mailer.default_url_options = { host: 'staging.Hours.com' }
+  config.force_ssl = false
 end

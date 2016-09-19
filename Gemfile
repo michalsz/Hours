@@ -42,6 +42,7 @@ gem "redcarpet"
 gem "holidays"
 gem "sprockets-rails", "~> 2.3"
 gem "brakeman"
+gem 'dotenv-rails'
 
 source "https://rails-assets.org" do
   gem "rails-assets-chartjs"
@@ -70,6 +71,12 @@ group :development, :test do
   gem "annotate"
   gem "letter_opener"
   gem "email_spec"
+  gem 'capistrano',         require: false
+  gem 'capistrano-rvm',     require: false
+  gem 'capistrano-rbenv',     require: false
+  gem 'capistrano-rails',   require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano3-puma',   require: false
 end
 
 group :test do
