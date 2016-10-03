@@ -2,6 +2,8 @@
   .footer-links
     %ul
       %li
+        %a{href: "#{root_path}"}
+          = t("pages.prices")
         %a{href: "#{root_path}#pricing"}
           = t("pages.prices")
 
@@ -13,4 +15,7 @@
 
     Stworzone przez
     %a{href: "https://redweb.pl", target: "_blank"} redweb.pl
-    %a{href: "/pages/about"} about
+    %a{href: "/pages/contact"}
+      = I18n.t("contact.contact")
+    %a{href: "/pages/about"}
+      = I18n.t("about.about_us")

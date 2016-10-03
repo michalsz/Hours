@@ -7,6 +7,7 @@
   background: $footer-background;
   padding: $base-line-height*2 $gutter;
   width: 100%;
+  font-size: 22px;
 
   .footer-links {
     @include clearfix;
@@ -19,7 +20,7 @@
   }
 
   ul {
-    margin-bottom: $base-line-height*2;
+    margin-bottom: $base-line-height;
   }
 
   li {
