@@ -12,7 +12,7 @@ gem "high_voltage"
 gem "jquery-rails", "~> 4.0"
 gem "neat"
 gem "bitters"
-gem "pg"
+gem "pg", "~> 0.19"
 gem "rack-timeout"
 gem "rails", "~> 4.2.5"
 gem "recipient_interceptor"
@@ -43,6 +43,7 @@ gem "holidays"
 gem "sprockets-rails", "~> 2.3"
 gem "brakeman"
 gem 'dotenv-rails'
+gem 'business_process', '~> 1.0.3'
 
 source "https://rails-assets.org" do
   gem "rails-assets-chartjs"
@@ -76,6 +77,7 @@ group :development, :test do
   gem 'capistrano-rails',   require: false
   gem 'capistrano-bundler', require: false
   gem 'capistrano3-puma',   require: false
+  gem 'ffaker', '~> 2.0.0'
 end
 
 group :test do

@@ -20,6 +20,7 @@ end
 
 resources :tags, only: [:show]
 resources :clients, only: [:show, :index, :edit, :update, :create]
+resources :payments, only: [:new]
 
 get "user/edit" => "users#edit", as: :edit_user
 get "account/edit" => "accounts#edit", as: :edit_account
