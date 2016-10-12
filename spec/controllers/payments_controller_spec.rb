@@ -35,7 +35,8 @@ RSpec.describe PaymentsController, type: :controller do
     context 'regular create action' do
       let(:token) { 'dfsa43fsa433HJ&fase4'}
       let(:response) { double('response', error: '0', token: token, body: 'fdsfs') }
-      subject { post :create, payment: { user_id: 1, email: 'tree@dasd.pl', amount: 100} }
+      subject { post :create,
+        payment: { user_id: 1, email: 'tree@dasd.pl', subscription: 'medium'} }
 
       it 'redirects to przelewy24' do
         request.env["HTTP_REFERER"] = '/'

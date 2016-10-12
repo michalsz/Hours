@@ -1,4 +1,8 @@
+require "subscription"
+
 class PaymentsController < ApplicationController
+
+  before_action :select_amount, only: [:create]
   def new
     @payment = Payment.new
   end
@@ -14,6 +18,11 @@ class PaymentsController < ApplicationController
   end
 
   private
+
+ def select_amount
+   subscription = Subscription.subscriptions.select {|s| s[:name] == params['payment']['subscription']}
+   params[:payment][:amount] = subscription[0][:price]
+ end
 
  def payment_params
    params.require(:payment).permit(:currency, :amount, :country, :email, :name, :city, :zip, :address, :for_trudly)
