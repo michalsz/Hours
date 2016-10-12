@@ -20,7 +20,13 @@ end
 
 resources :tags, only: [:show]
 resources :clients, only: [:show, :index, :edit, :update, :create]
-resources :payments, only: [:new]
+
+get "payments/show/:session_id" => "payments#show"
+resources :payments, only: [:new, :create] do
+  collection do
+    post :status
+  end
+end
 
 get "user/edit" => "users#edit", as: :edit_user
 get "account/edit" => "accounts#edit", as: :edit_account

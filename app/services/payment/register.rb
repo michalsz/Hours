@@ -31,9 +31,9 @@ class Payment::Register < BusinessProcess::Base
       p24_amount: payment.amount,
       p24_currency: payment.currency,
       p24_description: payment.description,
-      p24_email: payment.backer_email,
+      p24_email: payment.user.email,
       p24_country: payment.country,
-      p24_url_return: payment_url(session_id: payment.session_id),
+      p24_url_return: payments_url(session_id: payment.session_id),
       p24_url_status: status_payments_url,
       p24_api_version: '3.2',
       p24_sign: control_sum

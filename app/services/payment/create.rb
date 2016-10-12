@@ -5,7 +5,6 @@ class Payment::Create < BusinessProcess::Base
   def call
     if required_params_provided?
       perform = Payment::Register.call(payment: create_payment)
-
       perform.result if perform.success?
     else
       fail(:missing_params)

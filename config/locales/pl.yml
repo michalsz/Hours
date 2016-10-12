@@ -177,7 +177,6 @@ pl:
         create: Create Client
         update: Update Client
   info:
-    here: here
     no_categories_html: Wygląda na to, że nie masz jeszcze skonfigurowanych kategori, aby dodać
        kategorię kliknij link %{categories_path}.
     no_projects_html: Wygląda na to, że nie masz jeszcze skonfigurowanych projektów, aby dodać
@@ -192,7 +191,7 @@ pl:
     dropdown:
       edit_user: Edytuj profil
     entries: Moje wpisy
-  no_hours_registered: NIe ma wppisów dla projektu %{project}
+  no_hours_registered: Nie ma wpisów dla projektu %{project}
   project:
     errors:
       client_missing: Jeśli projekt jest rozliczany wymagany jest klient dla projektu.
@@ -315,3 +314,5 @@ pl:
     users: Użytkowników
     unlimited: Nieograniczona
     project_entries: Projektów i wpisów
+  payments:
+    purchase: Zakup
