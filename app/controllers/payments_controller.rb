@@ -1,10 +1,12 @@
 require "subscription"
 
 class PaymentsController < ApplicationController
+  layout 'payments'
 
   before_action :select_amount, only: [:create]
   def new
     @payment = Payment.new
+    @subscriptions = Subscription.subscriptions.map{ |s| s[:name]}
   end
 
   def create
@@ -25,6 +27,8 @@ class PaymentsController < ApplicationController
  end
 
  def payment_params
-   params.require(:payment).permit(:currency, :amount, :country, :email, :name, :city, :zip, :address, :for_trudly)
+   params.require(:payment).permit(:user_id, :currency, :amount, :country,
+                                   :email, :name, :city, :zip, :address,
+                                   :subscription)
  end
 end

@@ -1,10 +1,11 @@
-- content_for :page_title, 'zakup'
+- content_for :page_title, 'Zakup'
 .outer
   .container
     = I18n.t('payments.purchase')
     = simple_form_for(@payment) do |f|
       = f.error_notification
       .form-inputs
-        = f.input :user_id, as: :text
-        = f.input :amount
-        = f.button :submit, data: { disable_with: t("loader.saving") }
+        = f.input :user_id
+        = f.input :email, input_html: { value: current_user.email }
+        = f.input :subscription, as: :select, collection: @subscriptions
+        = f.button :submit , I18n.t('simple_form.labels.payments.submit')

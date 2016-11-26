@@ -25,6 +25,11 @@ RSpec.describe PaymentsController, type: :controller do
         subject
         expect(assigns(:payment)).not_to eq nil
       end
+
+      it 'assing subscriptions' do
+        subject
+        expect(assigns(:subscriptions)).to eq ['medium', 'large']
+      end
     end
   end
 

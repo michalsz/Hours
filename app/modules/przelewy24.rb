@@ -4,14 +4,20 @@ require 'digest'
 
 class Przelewy24
   def self.send_request(action, params)
+    Rails.logger.info(action)
     url = URI.parse(url_for(action))
 
     req = Net::HTTP::Post.new(url.path)
     req.form_data = params
 
+    Rails.logger.info('-------------url------')
+    Rails.logger.info(url)
+
     con = Net::HTTP.new(url.host, url.port)
     con.use_ssl = true
     con.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
+    Rails.logger.info(con.inspect)
     response = con.start { |http| http.request(req) }
     parse_response response.body
   end
@@ -33,10 +39,12 @@ class Przelewy24
 
   def self.merchant_id
     Rails.application.secrets.p24_merchant_id
+    'cd8414f7'
   end
 
   def self.crc_key
     Rails.application.secrets.p24_crc_key
+    'a8b02c501fbdeae7'
   end
 
   def self.sign(key)
@@ -59,7 +67,10 @@ class Przelewy24
 
   class << self
     def endpoint
+      Rails.logger.info('--------Rails.application.secrets.p24_endpoint-------')
+      Rails.logger.info(Rails.application.secrets.p24_endpoint)
       Rails.application.secrets.p24_endpoint
+      'https://secure.przelewy24.pl/external/wsdl/service.php?wsdl'
     end
 
     def parse_response(response)

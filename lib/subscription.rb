@@ -3,6 +3,10 @@ class Subscription
     [{ name: 'medium',
       price: 25,
       period: 'month'
+    },
+    { name: 'large',
+      price: 75,
+      period: 'month'
     }]
   end
 end

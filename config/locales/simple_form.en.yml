@@ -16,6 +16,8 @@ en:
         name: Name
       category:
         name: Name
+      payments:
+        submit: Purchase
     # Examples
     # labels:
     #   defaults:

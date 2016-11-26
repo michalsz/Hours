@@ -22,6 +22,9 @@ pl:
         name: Nazwa kategori
       projekt:
         budget: Budżet
+      payments:
+        submit: Kupuję
+
     # Examples
     # labels:
     #   defaults:

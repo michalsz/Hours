@@ -12,6 +12,8 @@ class Payment::Register < BusinessProcess::Base
   def call
     response = Przelewy24.send_request(:register, payment_params)
 
+    Rails.logger.info(response)
+
     if response.error == '0'
       if payment.update(token: response.token)
         payment
@@ -33,8 +35,8 @@ class Payment::Register < BusinessProcess::Base
       p24_description: payment.description,
       p24_email: payment.user.email,
       p24_country: payment.country,
-      p24_url_return: payments_url(session_id: payment.session_id),
-      p24_url_status: status_payments_url,
+      p24_url_return: payments_url(session_id: payment.session_id, host: 'dsd.pl'),
+      p24_url_status: status_payments_url(host: 'dsd.pl'),
       p24_api_version: '3.2',
       p24_sign: control_sum
     }
