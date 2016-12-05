@@ -35,6 +35,7 @@ class Payment::Create < BusinessProcess::Base
 
   # TODO: I18n
   def description
+    # TODO
     "Wpłata dla  - Dla trudly #{params[:for_trudly]}%"
   end
 
