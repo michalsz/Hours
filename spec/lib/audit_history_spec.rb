@@ -36,7 +36,7 @@ describe AuditChange do
     let(:audit_change) { AuditChange::Update.new(change) }
 
     it "to_string" do
-      expect(audit_change.to.to_s).to eq("nothing")
+      expect(audit_change.to.to_s).to eq I18n.t('audits.nothing')
     end
 
     it "#destroyed?" do
